@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>React Rails Monolith</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <title>Board It</title>
+      <%= csrf_meta_tags %>
+      <%= javascript_include_tag 'application' %>
+      <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
   <body>
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1>
+            <a href="/">Board It</a>
+          </h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li id="Restaurants" class="active"><%= link_to 'Restaurants' %></li>
+          <% if user_signed_in? %>
+            <!-- actions -->
+            <li class="active"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+            <li class="active"><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+              <% if current_user.admin %>
+              <li class="active"><%= link_to 'Admin Tools', '/admin' %></li>
+              <% end %>
+            <!-- profile_photo -->
+            <!-- <li class="active">
+              <div class="profile-photo">
+                <img src="<%= current_user.profile_photo %>">
+              </div>
+            </li> -->
+          <% else %>
+            <li class="active"><%= link_to 'Sign Up', new_user_registration_path %></li>
+            <li class="active"><%= link_to 'Sign In', new_user_session_path %></li>
+          <% end %>
+        </ul>
+
+      </section>
+    </nav>
+
+      <% if flash[:admin] %>
+        <p><%= flash[:admin] %></p>
+      <% end %>
+
+      <h4 class="alert text-center"><%= alert %></h4>
+      <h4 class="notice text-center"><%= notice %></h4>
+
     <%= yield %>
   </body>
 </html>
