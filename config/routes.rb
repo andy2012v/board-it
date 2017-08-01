@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  root 'static_pages#index'
+  devise_for :users
+  root 'homes#index'
+
+  resources :user, only: [:show, :index]
+
+  namespace :admin do
+    root 'admins#index'
+  end
 end
