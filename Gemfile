@@ -8,6 +8,8 @@ gem 'jquery-rails'
 gem 'listen'
 gem 'rails-assets-foundation', source: 'https://rails-assets.org'
 gem 'devise'
+gem 'dotenv'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'capybara'

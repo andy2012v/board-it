@@ -38,7 +38,7 @@
         null,
         1,
         null,
-        41,
+        48,
         4,
         4,
         4,
@@ -47,6 +47,41 @@
         null,
         null,
         4,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/andrewvaillant/challenges/board-it/app/controllers/admin/admins_controller.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/andrewvaillant/challenges/board-it/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -64,34 +99,7 @@
         0,
         0
       ],
-      "/Users/andrewvaillant/challenges/board-it/app/controllers/admin/admins_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
       "/Users/andrewvaillant/challenges/board-it/app/controllers/static_pages_controller.rb": [
-        0,
-        0
-      ],
-      "/Users/andrewvaillant/challenges/board-it/app/controllers/users_controller.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         0,
         0
       ],
@@ -106,6 +114,6 @@
         0
       ]
     },
-    "timestamp": 1501609837
+    "timestamp": 1501703162
   }
 }
