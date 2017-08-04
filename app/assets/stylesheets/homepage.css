@@ -162,7 +162,7 @@ div#text_box {
   width: 600px;
      margin: auto;
      background-color:#FFFFFF;
-     border: 50px <font color='"Red"'>solid</font> #FFFFFF;
+     
      overflow:auto;
      margin-top: 50px;
 }

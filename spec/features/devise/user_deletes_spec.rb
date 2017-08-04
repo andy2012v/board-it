@@ -4,7 +4,9 @@ feature "account deletion" do
   scenario "user deletes account successfully" do
     user = FactoryGirl.create(:user)
     visit root_path
-    click_on 'Sign In'
+    within('div.right') do
+       click_on 'Sign In'
+    end
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
     click_on 'Log in'
