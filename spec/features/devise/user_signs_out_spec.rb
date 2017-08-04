@@ -6,7 +6,9 @@ feature "user signs up" do
   scenario "as a user, i want to sign out" do
     user = FactoryGirl.create(:user)
     visit root_path
-    click_on 'Sign In'
+    within('div.right') do
+       click_on 'Sign In'
+    end
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
     click_on 'Log in'
@@ -14,7 +16,9 @@ feature "user signs up" do
     expect(page).to have_content("Signed in successfully.")
     expect(page).to have_content("Sign Out")
 
-    click_on 'Sign Out'
+    within('div.right') do
+       click_on 'Sign Out'
+    end
     expect(page).to have_content("Signed out successfully")
   end
 end

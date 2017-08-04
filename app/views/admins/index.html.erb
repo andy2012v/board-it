@@ -1,24 +1,26 @@
-<!-- for admins -->
-<% if current_user != nil && current_user.admin %>
-<div class="admin_bounding_box" >
-  <h1 class="admin_tools">Admin tools</h1>
+<div class="container small-6 large-centered columns">
+  <!-- for admins -->
+  <% if current_user != nil && current_user.admin %>
+  <div class="admin_bounding_box" >
+      <h1 class="admin_tools">Admin tools</h1>
 
-  <div class="text-center">
-    <h1>
-      <%= link_to "Exercise submissions", users_path, :class => 'button' %>
-    </h1>
-    <h1>
-      <%= link_to "Users Index", users_path, :class => 'button' %>
-    </h1>
-  </div>
-<!-- for regular users -->
-<% else %>
-  <div class="text-center new_exercise_box">
-    <h1>Oops! You must be an admin to view this page!</h1>
-  </div>
-<% end %>
-<!-- react -->
-<div id="app">
+      <div class="text-center">
+        <h1>
+          <%= link_to "Exercise submissions", users_path, :class => 'button' %>
+        </h1>
+        <h1>
+          <%= link_to "Users Index", users_path, :class => 'button' %>
+        </h1>
+      </div>
+    <!-- for regular users -->
+    <% else %>
+      <div class="text-center new_exercise_box">
+        <h1>Oops! You must be an admin to view this page!</h1>
+      </div>
+    <% end %>
+    <!-- react -->
+    <div id="app">
 
-</div>
+    </div>
+  </div>
 </div>

@@ -1,44 +1,58 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <title>Board It</title>
       <%= csrf_meta_tags %>
       <%= javascript_include_tag 'application' %>
       <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
-  <body>
-    <nav class="top-bar" data-topbar role="navigation">
-      <ul class="title-area">
-        <li class="name">
-          <h1>
-            <a href="/">Board It</a>
-          </h1>
-        </li>
-         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
+  <body class="background">
+    <a id="Title" href="/">WhiteBoard Daily</a>
 
+      <div class="right">
+        <% if user_signed_in? %>
+          <!-- actions -->
+          <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to 'Sign Up', new_user_registration_path, class: 'sign_up'%> |
+          <%= link_to 'Sign In', new_user_session_path, class: 'sign_out' %>
+        <% end %>
+      </div>
+
+    <nav class="top-bar" data-topbar role="navigation">
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li id="topbuttons" class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       <section class="top-bar-section">
         <!-- Right Nav Section -->
+        <a href="ruby">
+          <img src="https://miguel-savignano.gallerycdn.vsassets.io/extensions/miguel-savignano/ruby-symbols/0.1.5/1491058322439/Microsoft.VisualStudio.Services.Icons.Default" style="width:42px;height:42px;border:0;">
+        </a>
+        <a href="javascipt">
+          <img src="https://i.stack.imgur.com/Mmww2.png" style="width:42px;height:42px;border:0;">
+        </a>
+        <a href="javascipt">
+          <img src="http://logosrated.net/wp-content/uploads/parser/React-Logo-1.png" style="width:42px;height:42px;border:0;">
+        </a>
         <ul class="right">
-          <li id="review" class="active"><%= link_to 'Interview Questions' %></li>
+          <li id="barlinks" class="active"><%= link_to 'Interview Questions' %></li>
+          <li id="barlinks" class="active"><%= link_to 'Code Practice' %></li>
+          <li id="barlinks" class="active"><%= link_to 'What To Expect?' %></li>
+          <li id="barlinks" class="active"><%= link_to 'Helpful Links' %></li>
+
           <% if user_signed_in? %>
             <!-- actions -->
-            <li class="active"><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-            <li class="active"><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+            <li id="barlinks" class="active"><%= link_to 'Edit Profile', edit_user_registration_path %></li>
               <% if current_user.admin %>
-              <li class="active"><%= link_to 'Admin Tools', '/admin' %></li>
+              <li id="barlinks" class="active"><%= link_to 'Admin Tools', '/admin' %></li>
               <% end %>
-
-          <% else %>
-            <li class="active"><%= link_to 'Sign Up', new_user_registration_path %></li>
-            <li class="active"><%= link_to 'Sign In', new_user_session_path %></li>
           <% end %>
         </ul>
-
       </section>
     </nav>
+
+
 
       <% if flash[:admin] %>
         <p><%= flash[:admin] %></p>
@@ -49,4 +63,62 @@
 
     <%= yield %>
   </body>
+
+  <div class="ecommerce-footer">
+<div class="ecommerce-footer-links row">
+  <div class="small-12 medium-12 large-6 columns">
+    <div class="row ecommerce-footer-links-block">
+      <div class="small-4 medium-4 large-4 columns">
+        <h5>Help</h5>
+        <ul class="menu vertical">
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Return Policy</a></li>
+          <li><a href="#">Shipping &amp; Delivery</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+    <div class="small-12 medium-12 large-6 columns">
+     <div class="row">
+       <div class="small-4 medium-4 large-4 columns">
+        <h5>My Account</h5>
+        <ul class="menu vertical">
+          <% if user_signed_in? %>
+            <!-- actions -->
+            <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'footer_sign_out' %></li>
+          <% else %>
+            <li><%= link_to 'Sign Up', new_user_registration_path, class: 'footer_sign_up'%></li>
+            <li><%= link_to 'Sign In', new_user_session_path, class: 'footer_sign_in' %></li>
+          <% end %>
+          <li><a href="#">Order Status</a></li>
+          <li><a href="#">My Wishlist</a></li>
+        </ul>
+      </div>
+        <div class="small-4 medium-4 large-4 columns">
+              <h5>Social</h5>
+              <ul class="menu vertical">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Youtube</a></li>
+              </ul>
+            </div>
+           </div>
+          </div>
+        </div>
+        <div class="ecommerce-footer-bottom-bar row">
+          <div class="small-12 medium-5 columns">
+            <ul class="bottom-links">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+            </ul>
+          </div>
+          <div class="small-12 medium-5 columns">
+            <div class="bottom-copyright">
+              <span>©2017 WhiteBoard Daily. All rights reserved.</span>
+            </div>
+          </div>
+        </div>
+</div>
 </html>

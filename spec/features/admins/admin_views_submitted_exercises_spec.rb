@@ -6,7 +6,9 @@ feature "admin can view submitted exercises" do
     user = User.create(username: "Bob", password: "Password", password_confirmation: "Password", email: "Bob@bob.bob")
 
     visit root_path
-    click_on 'Sign In'
+    within('div.right') do
+       click_on 'Sign In'
+    end
     fill_in 'Email', with: admin.email
     fill_in 'Password', with: admin.password
     click_button 'Log in'

@@ -4,7 +4,9 @@ feature "user edits profile" do
   scenario "changes everything" do
     user = FactoryGirl.create(:user)
     visit root_path
-    click_on 'Sign In'
+    within('div.right') do
+       click_on 'Sign In'
+    end
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
     click_button 'Log in'
@@ -22,7 +24,9 @@ feature "user edits profile" do
   scenario "changes email" do
     user = FactoryGirl.create(:user)
     visit root_path
-    click_on 'Sign In'
+    within('div.right') do
+       click_on 'Sign In'
+    end
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
     click_button 'Log in'
@@ -38,7 +42,9 @@ feature "user edits profile" do
   scenario "changes password" do
     user = FactoryGirl.create(:user)
     visit root_path
-    click_on 'Sign In'
+    within('div.right') do
+       click_on 'Sign In'
+    end
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
     click_button 'Log in'
@@ -51,5 +57,5 @@ feature "user edits profile" do
 
     expect(page).to have_content("Your account has been updated successfully")
   end
-  
+
 end
