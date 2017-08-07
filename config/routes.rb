@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :destroy, :index]
 
+  resources :languages, only: [:show]
+  
   namespace :admin do
     root 'admins#index'
   end
