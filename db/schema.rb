@@ -10,12 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170804155231) do
+ActiveRecord::Schema.define(version: 20170807170253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "langauges", force: :cascade do |t|
+  create_table "exercises", force: :cascade do |t|
+    t.integer  "language_id", null: false
+    t.string   "difficulty",  null: false
+    t.string   "description", null: false
+    t.string   "solution",    null: false
+    t.date     "date",        null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "tips"
+    t.index ["language_id"], name: "index_exercises_on_language_id", using: :btree
+  end
+
+  create_table "languages", force: :cascade do |t|
     t.string   "name",        null: false
     t.string   "image_url_1", null: false
     t.string   "image_url_2", null: false
