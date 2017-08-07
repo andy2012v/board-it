@@ -1,0 +1,31 @@
+.four-up-feature {
+  text-align: center;
+  background-color: white;
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  height: 40rem;
+}
+h2.title {
+  font-size: 5rem;
+  font-family: 'Permanent Marker', cursive;
+  color: #D73A2E;
+}
+h5 {
+  text-align: center;
+}
+
+.four-up-feature .four-up-feature-header {
+  margin-bottom: 3rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.four-up-feature .four-up-feature-image {
+  margin-bottom: 2rem;
+}
+
+.four-up-feature .four-up-feature-text {
+  margin-bottom: 2rem;
+}
