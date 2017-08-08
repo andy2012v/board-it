@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   resources :exercises, only: [:show]
 
+
   resources :interview_questions, only: [:show]
 
   resources :practice, only: [:show]
@@ -15,7 +16,7 @@ Rails.application.routes.draw do
   resources :expect, only: [:show]
 
   resources :helpful, only: [:show]
-  
+
   namespace :admin do
     root 'admins#index'
   end
