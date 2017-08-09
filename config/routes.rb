@@ -4,14 +4,14 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :destroy, :index]
 
-  resources :languages, only: [:show]
+  resources :languages, only: [:show] do
+    resources :exercises, only: [:show]
+  end
 
-  resources :exercises, only: [:show]
 
+  resources :interview_questions, only: [:index]
 
-  resources :interview_questions, only: [:show]
-
-  resources :practice, only: [:show]
+  resources :practice, only: [:index]
 
   resources :expect, only: [:show]
 
