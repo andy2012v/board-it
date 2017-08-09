@@ -15,6 +15,7 @@ redirected to the daily exercise for that difficulty of that language. -->
     </div>
   </div>
     <div class="row align-center">
+
       <% @exercises.each do |exercise| %>
         <div class="small-6 large-4 columns">
           <a href="/languages/<%= @language.id %>/exercises/<%= exercise.id %>">
@@ -23,5 +24,6 @@ redirected to the daily exercise for that difficulty of that language. -->
           </a>
         </div>
       <% end %>
+
     </div>
 </section>
