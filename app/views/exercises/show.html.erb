@@ -8,8 +8,8 @@
   <div class='row' id='restaurant_show_page_box'>
     <div class='small-5 columns' >
       <h5> <%= @exercise.difficulty%> </h5>
-      <h5> <%= @exercise.description%> </h5>
-      <h5> <%= @exercise.solution%> </h5>
+      <textarea rows="10" readonly><%= @exercise.description%></textarea>
+      <textarea rows="10" readonly><%= @exercise.solution%></textarea>
       <h5> <%= @exercise.date%> </h5>
     </div>
   </div>

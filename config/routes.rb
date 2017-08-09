@@ -4,18 +4,19 @@ Rails.application.routes.draw do
 
   resources :users, only: [:show, :destroy, :index]
 
-  resources :languages, only: [:show]
+  resources :languages, only: [:show] do
+    resources :exercises, only: [:show]
+  end
 
-  resources :exercises, only: [:show]
 
-  resources :interview_questions, only: [:show]
+  resources :interview_questions, only: [:index]
 
-  resources :practice, only: [:show]
+  resources :practice, only: [:index]
 
   resources :expect, only: [:show]
 
   resources :helpful, only: [:show]
-  
+
   namespace :admin do
     root 'admins#index'
   end
