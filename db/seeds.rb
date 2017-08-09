@@ -41,79 +41,203 @@ Language.create(
 
 
 # RUBY
-# 1
+#1
 Exercise.create(
   difficulty: 'Easy',
-  description: 'Given an array [1,2,34,5,6,7,8,9], sum it up using a method.',
-  solution: 'def sum(array)
-  return array.inject(:+)
-  end',
+  description:
+   'val1 and val2 will equal what after the code below is executed? Explain your answer.
+    val1 = true and false  # hint: output of this statement in IRB is NOT value of val1!
+    val2 = true && false',
+  solution:
+   "Although these two statements might appear to be equivalent, they are not, due
+    to the order of operations. Specifically, the and and or operators have lower
+    precedence than the = operator, whereas the && and || operators have higher
+    precedence than the = operator, based on order of operations.
+
+    To help clarify this, here’s the same code, but employing parentheses to clarify
+    the default order of operations:
+
+    (val1 = true) and false    # results in val1 being equal to true
+    val2 = (true && false)     # results in val2 being equal to false
+    This is, incidentally, a great example of why using parentheses to clearly specify
+    your intent is generally a good practice, in any language. But whether or not you
+    use parentheses, it’s important to be aware of these order of operations rules and
+    to thereby ensure that you are properly determining when to employ and / or vs. && / ||.",
   date: '07/08/2017',
   language_id: ruby.id
 )
-# 2
+#2
 Exercise.create(
   difficulty: 'Medium',
-  description: 'class Foo
-	class << self
-		@foo = 42
-	end
-end',
-  solution: '(class << Foo ; @foo ; end)',
+  description:
+   "arr = ['onyx', 'wu tang', 'biggie']
+    Get the 'biggie' string from arr. Explain how arrays are ordered.',
+  solution:
+   'arr[2]
+    # OR
+    arr[-1]
+
+    Arrays are ordered collections of objects. Arrays are zero-indexed, meaning
+    the first element is at position zero, the second is at position one, and so forth.",
   date: '07/08/2017',
   language_id: ruby.id
 )
-# 3
+#3
 Exercise.create(
   difficulty: 'Hard',
-  description: "Write a function that sorts the keys in a hash by the length
-   of the key as a string. For instance, the hash:
-   { abc: 'hello', 'another_key' => 123, 4567 => 'third' }",
-  solution: 'hsh.keys.map(&:to_s).sort_by(&:length)',
+  description:
+   "Which class defines the Dog.about method? Demonstrate that this class includes the about method.
+
+    class Dog
+      def self.about
+        'we bark'
+      end
+    end",
+  solution:
+   "Dog.about # a singleton method that's defined in Dog's singleton class:
+    Dog.singleton_class.instance_methods.include? :about # => true
+    Every Ruby object has a singleton class to store methods for a particular object.",
   date: '07/08/2017',
   language_id: ruby.id
 )
-# 4
+#4
 Exercise.create(
   difficulty: 'Easy',
-  description: 'Given an array [1,2,34,5,6,7,8,9], sum it up using a method.',
-  solution: 'def sum(array)
-  return array.inject(:+)
-  end',
-  date: '11/08/2017',
+  description:
+   "Write a function that sorts the keys in a hash by the length of the key as a string. For instance, the hash:
+
+    { abc: 'hello', 'another_key' => 123, 4567 => 'third' }
+
+    should result in:
+
+    [\"abc\", \"4567\", \"another_key\"]",
+  solution:
+   'As is always true in programming, there are in fact multiple ways to accomplish this.
+
+    The most straightforward answer would be of the form:
+
+    hsh.keys.map(&:to_s).sort_by(&:length)
+
+    or:
+
+    hsh.keys.collect(&:to_s).sort_by { |key| key.length }
+
+    Alternatively, Ruby’s Enumerable mixin provides many methods to operate on
+    collections. The key here is to turn the hash keys into a collection, convert
+    them all to strings, then sort the array.
+
+    def key_sort hsh
+    	hsh.keys.collect(&:to_s).sort { |a, b| a.length <=> b.length }
+    end
+
+    An equivalent call of the collect method is done with the usual block syntax of:
+
+    collect { |x| x.to_s }',
+  date: '09/08/2017',
   language_id: ruby.id
 )
-# 5
+#5
 Exercise.create(
   difficulty: 'Medium',
-  description: 'class Foo
-	class << self
-		@foo = 42
-	end
-end',
-  solution: '(class << Foo ; @foo ; end)',
-  date: '11/08/2017',
+  description:
+   '# Example #1:
+    my_array = [10, 20, 30]
+    my_array[0] = "bob"
+
+    # Example #2:
+    another_arr = [10, 20, 30]
+    another_arr.map {|num| num == 10 ? "bob" : num}
+    Example #1 and Example #2 both result in the ["bob", 20, 30] array. What is the
+    key difference between the two examples?',
+  solution:
+   'Example #1 mutates my_array and Example #2 does not mutate another_arr.
+    Mutating an array means changing it so it is no longer the same (i.e. deleting
+    elements, adding new elements, etc.). The map() method creates a new array,
+    so the another_arr is unchanged',
+  date: '09/08/2017',
   language_id: ruby.id
 )
-# 6
+#6
 Exercise.create(
   difficulty: 'Hard',
-  description: "Write a function that sorts the keys in a hash by the length
-   of the key as a string. For instance, the hash:
-   { abc: 'hello', 'another_key' => 123, 4567 => 'third' }",
-  solution: 'hsh.keys.map(&:to_s).sort_by(&:length)',
-  date: '11/08/2017',
+  description:
+   'Add a method called my_singleton_class to the Object class that returns the
+    singleton class of an object. Don\'t use the built in singleton_class method.',
+  solution:
+   "class Object
+      def my_singleton_class
+        class << self
+          self
+        end
+      end
+    end
+
+    # Check the code works
+    Hash.my_singleton_class == Hash.singleton_class # => true
+    The \'class << obj' syntax changes the scope to the obj's singleton class. In this
+    case self equals Object, so class << self changes the scope to Object\'s singleton class",
+  date: '09/08/2017',
   language_id: ruby.id
 )
+#7
+# Exercise.create(
+#   difficulty: 'Easy',
+#   description: 'Given an array [1,2,34,5,6,7,8,9], sum it up using a method.',
+#   solution: 'def sum(array)
+#   return array.inject(:+)
+#   end',
+#   date: '11/08/2017',
+#   language_id: ruby.id
+# )
+#8
+# Exercise.create(
+#   difficulty: 'Medium',
+#   description: 'class Foo
+# 	class << self
+# 		@foo = 42
+# 	end
+# end',
+#   solution: '(class << Foo ; @foo ; end)',
+#   date: '11/08/2017',
+#   language_id: ruby.id
+# )
+#9
+# Exercise.create(
+#   difficulty: 'Hard',
+#   description: "Write a function that sorts the keys in a hash by the length
+#    of the key as a string. For instance, the hash:
+#    { abc: 'hello', 'another_key' => 123, 4567 => 'third' }",
+#   solution: 'hsh.keys.map(&:to_s).sort_by(&:length)',
+#   date: '11/08/2017',
+#   language_id: ruby.id
+# )
 
 
 # JavaScript
 Exercise.create(
 difficulty: 'Easy',
-description: "What will be printed on the console?
-(function() {
-   var a = b = 5;
-})();",
+description:
+  "// Use an object to map sets of brackets to their opposites?//
+  var brackets = {
+  '(': ')',
+  '{': '}',
+  '[': ']'
+  };
+
+  // On each input string, process it using the balance checker.//
+  module.exports = function (string) {
+  var stack = [];
+  // Process every character on input
+  for (var i = 0; i < string.length; i++) {
+    if (brackets[stack[stack.length - 1]] === string[i]) {
+      stack.pop();
+    } else {
+      stack.push(string[i]);
+    }
+  }
+
+  return !stack.length;
+  };",
 solution: 5,
 date: '08/07/2017',
 language_id: javascript.id
