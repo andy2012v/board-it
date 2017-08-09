@@ -41,15 +41,17 @@ Language.create(
 
 
 # RUBY
+# 1
 Exercise.create(
   difficulty: 'Easy',
   description: 'Given an array [1,2,34,5,6,7,8,9], sum it up using a method.',
   solution: 'def sum(array)
   return array.inject(:+)
   end',
-  date: '08/07/2017',
+  date: '07/08/2017',
   language_id: ruby.id
 )
+# 2
 Exercise.create(
   difficulty: 'Medium',
   description: 'class Foo
@@ -58,16 +60,49 @@ Exercise.create(
 	end
 end',
   solution: '(class << Foo ; @foo ; end)',
-  date: '08/07/2017',
+  date: '07/08/2017',
   language_id: ruby.id
 )
+# 3
 Exercise.create(
   difficulty: 'Hard',
   description: "Write a function that sorts the keys in a hash by the length
    of the key as a string. For instance, the hash:
    { abc: 'hello', 'another_key' => 123, 4567 => 'third' }",
   solution: 'hsh.keys.map(&:to_s).sort_by(&:length)',
-  date: '08/07/2017',
+  date: '07/08/2017',
+  language_id: ruby.id
+)
+# 4
+Exercise.create(
+  difficulty: 'Easy',
+  description: 'Given an array [1,2,34,5,6,7,8,9], sum it up using a method.',
+  solution: 'def sum(array)
+  return array.inject(:+)
+  end',
+  date: '11/08/2017',
+  language_id: ruby.id
+)
+# 5
+Exercise.create(
+  difficulty: 'Medium',
+  description: 'class Foo
+	class << self
+		@foo = 42
+	end
+end',
+  solution: '(class << Foo ; @foo ; end)',
+  date: '11/08/2017',
+  language_id: ruby.id
+)
+# 6
+Exercise.create(
+  difficulty: 'Hard',
+  description: "Write a function that sorts the keys in a hash by the length
+   of the key as a string. For instance, the hash:
+   { abc: 'hello', 'another_key' => 123, 4567 => 'third' }",
+  solution: 'hsh.keys.map(&:to_s).sort_by(&:length)',
+  date: '11/08/2017',
   language_id: ruby.id
 )
 
