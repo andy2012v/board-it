@@ -63,7 +63,7 @@ Exercise.create(
     your intent is generally a good practice, in any language. But whether or not you
     use parentheses, it’s important to be aware of these order of operations rules and
     to thereby ensure that you are properly determining when to employ and / or vs. && / ||.",
-  date: '07/08/2017',
+  date: '10/08/2017',
   language_id: ruby.id
 )
 #2
@@ -71,15 +71,15 @@ Exercise.create(
   difficulty: 'Medium',
   description:
    "arr = ['onyx', 'wu tang', 'biggie']
-    Get the 'biggie' string from arr. Explain how arrays are ordered.',
+    Get the 'biggie' string from arr. Explain how arrays are ordered.",
   solution:
    'arr[2]
     # OR
     arr[-1]
 
     Arrays are ordered collections of objects. Arrays are zero-indexed, meaning
-    the first element is at position zero, the second is at position one, and so forth.",
-  date: '07/08/2017',
+    the first element is at position zero, the second is at position one, and so forth.',
+  date: '10/08/2017',
   language_id: ruby.id
 )
 #3
@@ -97,7 +97,7 @@ Exercise.create(
    "Dog.about # a singleton method that's defined in Dog's singleton class:
     Dog.singleton_class.instance_methods.include? :about # => true
     Every Ruby object has a singleton class to store methods for a particular object.",
-  date: '07/08/2017',
+  date: '10/08/2017',
   language_id: ruby.id
 )
 #4
@@ -133,7 +133,7 @@ Exercise.create(
     An equivalent call of the collect method is done with the usual block syntax of:
 
     collect { |x| x.to_s }',
-  date: '09/08/2017',
+  date: '11/08/2017',
   language_id: ruby.id
 )
 #5
@@ -154,7 +154,7 @@ Exercise.create(
     Mutating an array means changing it so it is no longer the same (i.e. deleting
     elements, adding new elements, etc.). The map() method creates a new array,
     so the another_arr is unchanged',
-  date: '09/08/2017',
+  date: '11/08/2017',
   language_id: ruby.id
 )
 #6
@@ -176,41 +176,33 @@ Exercise.create(
     Hash.my_singleton_class == Hash.singleton_class # => true
     The \'class << obj' syntax changes the scope to the obj's singleton class. In this
     case self equals Object, so class << self changes the scope to Object\'s singleton class",
-  date: '09/08/2017',
+  date: '11/08/2017',
   language_id: ruby.id
 )
-#7
-# Exercise.create(
-#   difficulty: 'Easy',
-#   description: 'Given an array [1,2,34,5,6,7,8,9], sum it up using a method.',
-#   solution: 'def sum(array)
-#   return array.inject(:+)
-#   end',
-#   date: '11/08/2017',
-#   language_id: ruby.id
-# )
-#8
-# Exercise.create(
-#   difficulty: 'Medium',
-#   description: 'class Foo
-# 	class << self
-# 		@foo = 42
-# 	end
-# end',
-#   solution: '(class << Foo ; @foo ; end)',
-#   date: '11/08/2017',
-#   language_id: ruby.id
-# )
-#9
-# Exercise.create(
-#   difficulty: 'Hard',
-#   description: "Write a function that sorts the keys in a hash by the length
-#    of the key as a string. For instance, the hash:
-#    { abc: 'hello', 'another_key' => 123, 4567 => 'third' }",
-#   solution: 'hsh.keys.map(&:to_s).sort_by(&:length)',
-#   date: '11/08/2017',
-#   language_id: ruby.id
-# )
+7
+Exercise.create(
+  difficulty: 'Easy',
+  description: '',
+  solution: '',
+  date: '10/08/2017',
+  language_id: ruby.id
+)
+8
+Exercise.create(
+  difficulty: 'Medium',
+  description: '',
+  solution: '',
+  date: '10/08/2017',
+  language_id: ruby.id
+)
+9
+Exercise.create(
+  difficulty: 'Hard',
+  description: "",
+  solution: '',
+  date: '10/08/2017',
+  language_id: ruby.id
+)
 
 
 # JavaScript
@@ -239,7 +231,7 @@ description:
   return !stack.length;
   };",
 solution: 5,
-date: '08/07/2017',
+date: '10/07/2017',
 language_id: javascript.id
 )
 Exercise.create(
@@ -260,7 +252,7 @@ description:
   var test = obj.prop.getFullname;
   console.log(test());",
 solution: "The code prints Aurelio De Rosa and John Doe",
-date: '08/07/2017',
+date: '10/07/2017',
 language_id: javascript.id
 )
 Exercise.create(
@@ -278,12 +270,12 @@ solution: "function Traverse(p_element,p_callback) {
        Traverse(list[i],p_callback);  // recursive call
    }
 }",
-date: '08/07/2017',
+date: '10/07/2017',
 language_id: javascript.id
 )
 
 
-# React
+# Python
 Exercise.create(
   difficulty: 'Easy',
   description: 'description',
