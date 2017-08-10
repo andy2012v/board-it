@@ -1,18 +1,25 @@
-
-
-
 <div>
     <h1 class='exercise_page_title'> <%= @language.name%> </h1>
   </div>
 
   <div class='row' id='restaurant_show_page_box'>
-    <div class='small-5 columns' >
-      <h5> <%= @exercise.difficulty%> </h5>
-      <textarea rows="10" readonly><%= @exercise.description%></textarea>
-      <textarea rows="10" readonly><%= @exercise.solution%></textarea>
-      <h5> <%= @exercise.date%> </h5>
+    <div class="small-11 small-centered columns">
+      <h5>Difficulty: <%= @exercise.difficulty%></h5>
+      <h5>Date: <%= @exercise.date%></h5>
+      <h4>Exercise</h4>
+      <textarea placeholder="This is an awesome comment box" rows="20"
+      name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
+      autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
+      readonly>    <%= @exercise.description%></textarea>
+      <h4>Solution</h4>
+      <textarea placeholder="This is an awesome comment box" rows="20"
+      name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
+      autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
+      readonly>    <%= @exercise.solution%></textarea></textarea>
+      <h4>Tips</h4>
+      <textarea placeholder="This is an awesome comment box" rows="20"
+      name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
+      autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
+      readonly>    <%= @exercise.tips%></textarea></textarea>
     </div>
   </div>
-
-
->
