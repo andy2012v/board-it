@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'dotenv/load'
 
+
+
 User.create(
   admin: true,
   username: 'BoardItAdmin',

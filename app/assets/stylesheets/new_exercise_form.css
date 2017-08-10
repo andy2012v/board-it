@@ -1,0 +1,11 @@
+.notice {
+  color: red;
+}
+
+div#exercise-creation.container {
+   border-radius: 25px;
+   background: #ffffff;
+   padding: 20px;
+   width: 50rem;
+   height: 50rem;
+}

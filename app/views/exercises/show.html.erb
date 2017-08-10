@@ -4,19 +4,19 @@
 
   <div class='row' id='restaurant_show_page_box'>
     <div class="small-11 small-centered columns">
-      <h5>Difficulty: <%= @exercise.difficulty%></h5>
-      <h5>Date: <%= @exercise.date%></h5>
-      <h4>Exercise</h4>
+      <h4 id="titles-exercises" >Difficulty: <%= @exercise.difficulty%></h4>
+      <h4 id="titles-exercises" >Date: <%= @exercise.date%></h4>
+      <h4 id="subtitles-exercises">Exercise:</h4>
       <textarea placeholder="This is an awesome comment box" rows="20"
       name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
       autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
       readonly>    <%= @exercise.description%></textarea>
-      <h4>Solution</h4>
+      <h4 id="subtitles-exercises">Solution:</h4>
       <textarea placeholder="This is an awesome comment box" rows="20"
       name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
       autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
       readonly>    <%= @exercise.solution%></textarea></textarea>
-      <h4>Tips</h4>
+      <h4 id="subtitles-exercises">Tips:</h4>
       <textarea placeholder="This is an awesome comment box" rows="20"
       name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
       autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"

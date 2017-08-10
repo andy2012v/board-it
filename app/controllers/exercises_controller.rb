@@ -12,8 +12,8 @@ class ExercisesController < ApplicationController
     @exercise = Exercise.new(exercise_params)
 
     if @exercise.save
-      flash[:notice] = 'Restaurant Added Successfully'
-      redirect_to @restaurant
+      flash[:notice] = 'Exercise Added Successfully'
+      redirect_to '/admin'
     else
       flash[:alert] = "error!"
       render :new

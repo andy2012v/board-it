@@ -11,7 +11,7 @@ feature "admin can view submitted exercises" do
     end
     fill_in 'Email', with: admin.email
     fill_in 'Password', with: admin.password
-    click_button 'Log in'
+    click_button 'Log In'
     click_on 'Admin Tools'
 
     expect(page).to have_content("Exercise submissions")

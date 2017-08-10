@@ -9,7 +9,7 @@ feature "user edits profile" do
     end
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
-    click_button 'Log in'
+    click_button 'Log In'
 
     click_on "Edit Profile"
     fill_in 'Email', with: 'newemail@example.com'
@@ -29,7 +29,7 @@ feature "user edits profile" do
     end
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
-    click_button 'Log in'
+    click_button 'Log In'
 
     click_on "Edit Profile"
     fill_in 'Email', with: 'newemail@example.com'
@@ -47,7 +47,7 @@ feature "user edits profile" do
     end
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
-    click_button 'Log in'
+    click_button 'Log In'
 
     click_on "Edit Profile"
     fill_in 'New Password', with: 'newpassword'

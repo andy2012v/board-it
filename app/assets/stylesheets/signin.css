@@ -1,0 +1,54 @@
+div#log-in.container {
+  border-radius: 25px;
+  background: #ffffff;
+  padding: 20px;
+  width: 50rem;
+  height: 30rem;
+}
+
+h2#log-in-title {
+  text-align: center;
+  color: #9FC5F8;
+  font-family: Exposition;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+div#forgot {
+  text-align: center;
+}
+.text-forgot {
+  color: black;
+  font-family: Exposition;
+}
+
+div#login-large-container {
+  border-radius: 10px;
+  background: #2a2e32;
+  padding: 20px;
+  width: 75rem;
+  height: 40rem;
+}
+
+.button {
+  background-color: #f18805;
+  font-family: Exposition;
+}
+
+.text-password {
+  color: #9FC5F8;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 1.3rem;
+  font-family: Exposition;
+}
+.text-remember-me {
+  color: #9FC5F8;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 1.3rem;
+  font-family: Exposition;
+}
+.text-email {
+  color: #9FC5F8;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: 1.3rem;
+  font-family: Exposition;
+}

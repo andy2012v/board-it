@@ -11,7 +11,7 @@ feature "admin can delete a user" do
     end
     fill_in 'Email', with: admin.email
     fill_in 'Password', with: admin.password
-    click_button 'Log in'
+    click_button 'Log In'
 
     click_on 'Admin Tools'
 
