@@ -1,0 +1,27 @@
+<!-- for admins -->
+
+<div class="create_exercise_box">
+  <h1 class="new_exercise">New Exercise Form</h1>
+  <%= form_for(@exercise) do |f| %>
+    <div class="exercise_form_fields" >
+      <%= f.collection_select :language_id, Language.order(:name),:id,:name, include_blank: true %>
+
+      <%= f.label :difficulty %>
+      <%= f.text_field :difficulty %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <%= f.label :solution %>
+      <%= f.text_field :solution %>
+
+      <%= f.label :date %>
+      <%= f.text_field :date %>
+
+      <%= f.label :tips %>
+      <%= f.text_field :tips %>
+
+    </div>
+    <%= f.submit "Add Exercise", :class => 'button' %>
+  <% end %>
+</div>

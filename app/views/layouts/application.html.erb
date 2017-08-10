@@ -40,11 +40,13 @@
           <li id="barlinks" class="active"><%= link_to 'Code Practice', '/practice/' %></li>
           <!-- <li id="barlinks" class="active"><%= link_to 'What To Expect?', '/expect/:id' %></li>
           <li id="barlinks" class="active"><%= link_to 'Helpful Links', '/helpful/:id' %></li> -->
-          <% if user_signed_in? %>
+          <% if current_user %>
             <!-- actions -->
             <li id="barlinks" class="active"><%= link_to 'Edit Profile', edit_user_registration_path %></li>
               <% if current_user.admin %>
-              <li id="barlinks" class="active"><%= link_to 'Admin Tools', '/admin' %></li>
+                <li id="barlinks" class="active"><%= link_to 'Admin Tools', '/admin' %></li>
+              <% else %>
+                <li id="barlinks" class="active"><%= link_to 'Create Exercise', new_exercise_path%></li>
               <% end %>
           <% end %>
         </ul>

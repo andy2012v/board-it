@@ -1,7 +1,7 @@
 class Admin::AdminsController < ApplicationController
 
-  def index
-    render template: 'admins/index'
+  def show
+    render template: 'admins/show'
   end
 
 end

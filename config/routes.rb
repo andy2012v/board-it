@@ -8,17 +8,14 @@ Rails.application.routes.draw do
     resources :exercises, only: [:show]
   end
 
+  resources :exercises, only: [:new, :create]
 
   resources :interview_questions, only: [:index]
 
   resources :practice, only: [:index]
 
-  resources :expect, only: [:show]
-
-  resources :helpful, only: [:show]
-
   namespace :admin do
-    root 'admins#index'
+    root 'admins#show'
   end
 
   namespace :api do
