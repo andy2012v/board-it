@@ -99,8 +99,58 @@
         0,
         0
       ],
+      "/Users/andrewvaillant/challenges/board-it/app/controllers/api/v1/languages_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/andrewvaillant/challenges/board-it/app/controllers/exercises_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/andrewvaillant/challenges/board-it/app/controllers/expect_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/andrewvaillant/challenges/board-it/app/controllers/helpful_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/andrewvaillant/challenges/board-it/app/controllers/interview_questions_controller.rb": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "/Users/andrewvaillant/challenges/board-it/app/controllers/languages_controller.rb": [
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "/Users/andrewvaillant/challenges/board-it/app/controllers/practice_controller.rb": [
         0,
         0,
         0,
@@ -121,7 +171,21 @@
         0,
         0
       ],
+      "/Users/andrewvaillant/challenges/board-it/app/models/exercise.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
       "/Users/andrewvaillant/challenges/board-it/app/models/language.rb": [
+        0,
+        0,
         0,
         0,
         0,
@@ -131,6 +195,6 @@
         0
       ]
     },
-    "timestamp": 1501880852
+    "timestamp": 1502387291
   }
 }
