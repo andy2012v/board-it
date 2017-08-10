@@ -1,8 +1,13 @@
 body {background: #F0F0F0;}
 
 
-h5 {
-  margin-left: 55px;
+h4#titles-exercises {
+  margin-left: auto;
+  color: #9FC5F8;
+  text-decoration: underline;
+}
+
+h4#subtitles-exercises {
   color: #9FC5F8;
   text-decoration: underline;
 }
