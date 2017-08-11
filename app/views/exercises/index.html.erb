@@ -1,0 +1,18 @@
+<div id="list-all">
+  <% @languages.each do |language| %>
+    <div class="large-12 columns">
+      <h6> <%= language.name %></h6>
+      <% @exercises.each do |exercise| %>
+          <% if language.id == exercise.language_id %>
+            <div>
+              <%= User.find(exercise.user_id).username %>
+              <%= exercise.difficulty %></br>
+              <%= exercise.date %></br></br>
+              <%= exercise.description %></br></br>
+              <%= exercise.solution %>
+            </div></br>
+          <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
