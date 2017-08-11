@@ -15,13 +15,11 @@ feature "admin can view submitted exercises" do
     click_on 'Admin Tools'
 
     expect(page).to have_content("Exercise submissions")
-    click_on("Exercise submissions")
+    expect(page).to have_content("Users Index")
+    expect(page).to have_content("Create Exercise")
+    click_link("Exercise submissions")
 
-    expect(page).to have_content("Bob")
-    expect(page).to have_link("Bob")
-    click_on("Bob")
-
-    expect(page).to have_content("Bob")
-    expect(page).to have_content("destroy")
+    expect(user).to have_attributes(:username => "Bob")
+  
   end
 end
