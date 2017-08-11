@@ -1,0 +1,37 @@
+h4#language-name {
+  margin-left: auto;
+  color: #0288d1;
+  font-family: Exposition;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h6#user {
+  margin-left: auto;
+  color: #0288d1;
+
+}
+
+div#submissions.container {
+  width: 98rem;
+  font-size: .7rem;
+}
+
+span#user-name {
+  color: black;
+  text-decoration: none;
+}
+
+div.box {
+  width: auto rem;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+
+div#submission.box {
+  background-color: #6c596e;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
