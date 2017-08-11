@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :exercises, only: [:show]
   end
 
-  resources :exercises, only: [:new, :create]
+  resources :exercises, only: [:new, :create, :index]
 
   resources :interview_questions, only: [:index]
 

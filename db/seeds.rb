@@ -66,7 +66,8 @@ Exercise.create(
     use parentheses, it’s important to be aware of these order of operations rules and
     to thereby ensure that you are properly determining when to employ and / or vs. && / ||.",
   date: '10/08/2017',
-  language_id: ruby.id
+  language_id: ruby.id,
+  user_id: 1
 )
 #2
 Exercise.create(
@@ -82,7 +83,8 @@ Exercise.create(
     Arrays are ordered collections of objects. Arrays are zero-indexed, meaning
     the first element is at position zero, the second is at position one, and so forth.',
   date: '10/08/2017',
-  language_id: ruby.id
+  language_id: ruby.id,
+  user_id: 1
 )
 #3
 Exercise.create(
@@ -100,7 +102,8 @@ Exercise.create(
     Dog.singleton_class.instance_methods.include? :about # => true
     Every Ruby object has a singleton class to store methods for a particular object.",
   date: '10/08/2017',
-  language_id: ruby.id
+  language_id: ruby.id,
+  user_id: 1
 )
 #4
 Exercise.create(
@@ -136,7 +139,8 @@ Exercise.create(
 
     collect { |x| x.to_s }',
   date: '11/08/2017',
-  language_id: ruby.id
+  language_id: ruby.id,
+  user_id: 1
 )
 #5
 Exercise.create(
@@ -157,7 +161,8 @@ Exercise.create(
     elements, adding new elements, etc.). The map() method creates a new array,
     so the another_arr is unchanged',
   date: '11/08/2017',
-  language_id: ruby.id
+  language_id: ruby.id,
+  user_id: 1
 )
 #6
 Exercise.create(
@@ -179,7 +184,8 @@ Exercise.create(
     The \'class << obj' syntax changes the scope to the obj's singleton class. In this
     case self equals Object, so class << self changes the scope to Object\'s singleton class",
   date: '11/08/2017',
-  language_id: ruby.id
+  language_id: ruby.id,
+  user_id: 1
 )
 7
 Exercise.create(
@@ -187,7 +193,8 @@ Exercise.create(
   description: '',
   solution: '',
   date: '10/08/2017',
-  language_id: ruby.id
+  language_id: ruby.id,
+  user_id: 1
 )
 8
 Exercise.create(
@@ -195,7 +202,8 @@ Exercise.create(
   description: '',
   solution: '',
   date: '10/08/2017',
-  language_id: ruby.id
+  language_id: ruby.id,
+  user_id: 1
 )
 9
 Exercise.create(
@@ -203,7 +211,8 @@ Exercise.create(
   description: "",
   solution: '',
   date: '10/08/2017',
-  language_id: ruby.id
+  language_id: ruby.id,
+  user_id: 1
 )
 
 
@@ -234,7 +243,8 @@ description:
   };",
 solution: 5,
 date: '10/07/2017',
-language_id: javascript.id
+language_id: javascript.id,
+user_id: 1
 )
 Exercise.create(
 difficulty: 'Medium',
@@ -255,7 +265,8 @@ description:
   console.log(test());",
 solution: "The code prints Aurelio De Rosa and John Doe",
 date: '10/07/2017',
-language_id: javascript.id
+language_id: javascript.id,
+user_id: 1
 )
 Exercise.create(
 difficulty: 'Hard',
@@ -273,7 +284,8 @@ solution: "function Traverse(p_element,p_callback) {
    }
 }",
 date: '10/07/2017',
-language_id: javascript.id
+language_id: javascript.id,
+user_id: 1
 )
 
 
@@ -283,19 +295,22 @@ Exercise.create(
   description: 'description',
   solution: 'solution',
   date: '08/07/2017',
-  language_id: react.id
+  language_id: react.id,
+  user_id: 1
 )
 Exercise.create(
   difficulty: 'Medium',
   description: 'description',
   solution: 'solution',
   date: '08/07/2017',
-  language_id: react.id
+  language_id: react.id,
+  user_id: 1
 )
 Exercise.create(
   difficulty: 'Hard',
   description: 'description',
   solution: 'solution',
   date: '08/07/2017',
-  language_id: react.id
+  language_id: react.id,
+  user_id: 1
 )
