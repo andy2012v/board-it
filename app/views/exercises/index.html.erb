@@ -18,34 +18,6 @@
                 </div>
               </div></br>
             <% end %>
-            <% if language.id == exercise.language_id %>
-              <div id="submission" class="box">
-                <h6 id="user"><span id="user-name">Username: </span>
-                <%= User.find(exercise.user_id).username %></h6>
-                <h6 id="user"><span id="user-name">Difficulty: </span><%= exercise.difficulty %></h6>
-                <%= exercise.date %></br></br>
-                <%= exercise.description %></br></br>
-                <%= exercise.solution %></br></br>
-                <div id="box-buttons" class="box">
-                  <a href="#" class="button-3d">Accept</a>
-                  <a href="#" class="button-3d">Decline</a><br>
-                </div>
-              </div></br>
-              <% end %>
-              <% if language.id == exercise.language_id %>
-                <div id="submission" class="box">
-                  <h6 id="user"><span id="user-name">Username: </span>
-                  <%= User.find(exercise.user_id).username %></h6>
-                  <h6 id="user"><span id="user-name">Difficulty: </span><%= exercise.difficulty %></h6>
-                  <%= exercise.date %></br></br>
-                  <%= exercise.description %></br></br>
-                  <%= exercise.solution %></br></br>
-                  <div id="box-buttons" class="box">
-                    <a href="#" class="button-3d">Accept</a>
-                    <a href="#" class="button-3d">Decline</a><br>
-                  </div>
-                </div></br>
-              <% end %>
         <% end %>
       </div>
     <% end %>
