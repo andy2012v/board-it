@@ -33,7 +33,7 @@ Language.create(
 )
 python =
 Language.create(
-  name: 'React',
+  name: 'Python',
   image_url_1: "https://i.stack.imgur.com/Mmww2.png",
   image_url_2: "https://i.stack.imgur.com/Mmww2.png",
   image_url_3: "https://i.stack.imgur.com/Mmww2.png"
@@ -316,7 +316,7 @@ Exercise.create(
 difficulty: 'easy',
 description: 'description',
 solution: "solution",
-date: '17/08/2017',
+date: '18/08/2017',
 language_id: javascript.id,
 user_id: 1
 )
@@ -324,7 +324,7 @@ Exercise.create(
 difficulty: 'medium',
 description: 'description',
 solution: "solution",
-date: '17/08/2017',
+date: '18/08/2017',
 language_id: javascript.id,
 user_id: 1
 )
@@ -332,17 +332,19 @@ Exercise.create(
 difficulty: 'hard',
 description: 'description',
 solution: "solution",
-date: '17/08/2017',
+date: '18/08/2017',
 language_id: javascript.id,
 user_id: 1
 )
+
+
 
 # Python
 Exercise.create(
   difficulty: 'Easy',
   description: 'description',
   solution: 'solution',
-  date: '16/08/2017',
+  date: '17/08/2017',
   language_id: python.id,
   user_id: 1
 )
@@ -350,7 +352,7 @@ Exercise.create(
   difficulty: 'Medium',
   description: 'description',
   solution: 'solution',
-  date: '16/08/2017',
+  date: '17/08/2017',
   language_id: python.id,
   user_id: 1
 )
@@ -358,7 +360,7 @@ Exercise.create(
   difficulty: 'Hard',
   description: 'description',
   solution: 'solution',
-  date: '16/08/2017',
+  date: '17/08/2017',
   language_id: python.id,
   user_id: 1
 )
