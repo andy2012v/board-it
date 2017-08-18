@@ -1,4 +1,4 @@
-h2#edit_title {
+#edit_title {
   color: #0288d1;
   font-family: Exposition;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -7,21 +7,18 @@ h2#edit_title {
   justify-content: center;
 }
 
-#pass-length {
-}
-
 #edit-form {
   color: #0288d1;
   font-family: Exposition;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-div.actions{
+.actions{
    display: flex;
    align-items: center;
    justify-content: center;
 }
-div.cancel{
+.cancel{
   display: flex;
   align-items: center;
   justify-content: center;
