@@ -1,13 +1,19 @@
-<% if current_user != nil && current_user.admin %>
-<div class="user_show_box">
-<%= @user.username %>
+<div id="user-all">
+  <% if current_user != nil && current_user.admin %>
+    <div class="user_show_box">
+        <div id="user-credentials" >
+          <h4 id="username-index">Username: <span id="user-index"><%= @user.username %></span></h4>
+          <h4 id="email-index">Email: <span id="user-index"><%= @user.email %></span></h4>
 
- <%= link_to "destroy", @user, method: :delete,
-    data: { confirm: "You sure?" } %>
+           <%= link_to "destroy", @user, method: :delete,
+              data: { confirm: "You sure?" } %>
 
-<% else %>
+          <% else %>
+        </div>
+    </div>
+
+  <h1>WHOOPS you must be an admin to view this page</h1>
+
+
+  <% end %>
 </div>
-<h1>WHOOPS you must be an admin to view this page</h1>
-
-
-<% end %>
