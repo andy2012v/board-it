@@ -9,3 +9,18 @@
 #user-all {
   text-align: center;
 }
+
+#email-index {
+  color: #0288D1;
+}
+
+#destroy_container {
+  margin-top: 2rem;
+  border-radius: 5rem;
+  width: 5rem;
+  background-color: #0288D1;
+}
+
+#Destroy {
+  color: white;
+}

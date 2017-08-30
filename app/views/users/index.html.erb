@@ -1,10 +1,11 @@
 <% if current_user != nil && current_user.admin %>
-
-<div class="user_index_box">
-
-<% @users.each do |user| %>
-<%= link_to user.username, user%><br>
-<% end %>
+<h3 id="users_list">Users List:</h3>
+<div>
+  <% @users.each do |user| %>
+    <div class="box" id="users_box">
+      <%= link_to user.username, user, :id => "username_text"%><br>
+    </div>
+  <% end %>
 </div>
 
 
