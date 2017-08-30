@@ -8,12 +8,18 @@
 require 'dotenv/load'
 
 
-
+# ADMIN
 User.create(
   admin: true,
   username: 'BoardItAdmin',
   email: 'admin@gmail.com',
   password: 'admin2017'
+)
+# EXAMPLE USER #1
+User.create(
+  username: 'user1',
+  email: 'user1@gmail.com',
+  password: 'user1user'
 )
 
 

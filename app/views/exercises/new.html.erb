@@ -3,26 +3,26 @@
     <h1 class="new_exercise">New Exercise Form</h1>
     <%= form_for(@exercise) do |f| %>
       <div class="exercise_form_fields" >
-        <%= f.collection_select :language_id, Language.order(:name),:id,:name, include_blank: true %>
+        <%= f.label :Language, :class => "subs" %>
+        <%= f.collection_select :language_id, Language.order(:name),:id,:name,
+         include_blank: true %>
 
-        <%= f.label :difficulty %>
+        <%= f.label :difficulty, :class => "subs" %>
         <%= f.text_field :difficulty %>
 
-        <%= f.label :description %>
-        <%= f.text_field :description %>
+        <%= f.label :description, :class => "subs" %>
+        <%= f.text_area :description, :class => "text_area" %>
 
-        <%= f.label :solution %>
-        <%= f.text_field :solution %>
+        <%= f.label :solution, :class => "subs" %>
+        <%= f.text_area :solution, :class => "text_area" %>
 
-        <%= f.label :date %>
+        <%= f.label :date, :class => "subs" %> <div id="dates">DD/MM/YYYY</div>
         <%= f.text_field :date %>
 
-        <%= f.label :tips %>
+        <%= f.label :tips, :class => "subs" %>
         <%= f.text_field :tips %>
 
-        <%= f.label :user_id %>
-        <%= f.text_field :user_id, value: current_user.id  %>
-
+        <%= f.hidden_field :user_id, value: current_user.id  %>
       </div>
       <%= f.submit "Add Exercise", :class => 'button' %>
     <% end %>
