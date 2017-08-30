@@ -12,13 +12,14 @@ h6#user {
 }
 
 div#submissions.container {
-  width: 98rem;
+  width: auto;
   font-size: .7rem;
 }
 
 span#user-name {
   color: black;
   text-decoration: none;
+  font-family: Exposition;
 }
 
 div.box {
@@ -34,4 +35,33 @@ div#submission.box {
   padding: 20px;
   width: 100%;
   height: 100%;
+}
+
+#submission {
+  margin-left: auto;
+  background-color: white;
+  height: auto;
+}
+
+#submission_diff{
+  margin-left: auto;
+  background-color: white;
+}
+
+#date_sub {
+  color: black;
+  text-decoration: none;
+  font-family: Exposition;
+  height: auto;
+}
+#date_desc{
+  color: black;
+  text-decoration: none;
+  font-family: Exposition;
+}
+
+#date_sol {
+  color: black;
+  text-decoration: none;
+  font-family: Exposition;
 }

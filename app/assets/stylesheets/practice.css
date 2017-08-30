@@ -3,6 +3,11 @@ h2#InterviewTitle {
   text-align: center;
 }
 
+.container#InterviewTitle {
+  border-radius: 5rem;
+  width: 75rem;
+  background-color: #6C596E;
+}
 
 
 

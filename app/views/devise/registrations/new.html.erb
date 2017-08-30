@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container" id="signup_container">
   <div class="small-6 large-centered columns">
   <h2 class="signup">Sign Up</h2>
 
@@ -8,22 +8,22 @@
 
 
     <div class="field">
-      <%= f.label :email %>
+      <%= f.label :email, :class => "signup_form" %>
       <%= f.email_field :email, autofocus: true %>
     </div>
 
     <div class="field">
-      <%= f.label :username %>
+      <%= f.label :username, :class => "signup_form" %>
       <%= f.text_field :username, autofocus: true %>
     </div>
 
     <div class="field">
-      <%= f.label :password %>
+      <%= f.label :password, :class => "signup_form" %>
       <%= f.password_field :password, autocomplete: "off" %>
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation, "Password Confirmation" %>
+      <%= f.label :password_confirmation, "Password Confirmation", :class => "signup_form" %>
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
