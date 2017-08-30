@@ -44,10 +44,34 @@ Language.create(
   image_url_2: "https://i.stack.imgur.com/Mmww2.png",
   image_url_3: "https://i.stack.imgur.com/Mmww2.png"
 )
-
-
-
-
+rails =
+Language.create(
+  name: 'Rails',
+  image_url_1: "https://i.stack.imgur.com/Mmww2.png",
+  image_url_2: "https://i.stack.imgur.com/Mmww2.png",
+  image_url_3: "https://i.stack.imgur.com/Mmww2.png"
+)
+java =
+Language.create(
+  name: 'Java',
+  image_url_1: "https://i.stack.imgur.com/Mmww2.png",
+  image_url_2: "https://i.stack.imgur.com/Mmww2.png",
+  image_url_3: "https://i.stack.imgur.com/Mmww2.png"
+)
+cplusplus =
+Language.create(
+  name: 'C++',
+  image_url_1: "https://i.stack.imgur.com/Mmww2.png",
+  image_url_2: "https://i.stack.imgur.com/Mmww2.png",
+  image_url_3: "https://i.stack.imgur.com/Mmww2.png"
+)
+sql =
+Language.create(
+  name: 'SQL',
+  image_url_1: "https://i.stack.imgur.com/Mmww2.png",
+  image_url_2: "https://i.stack.imgur.com/Mmww2.png",
+  image_url_3: "https://i.stack.imgur.com/Mmww2.png"
+)
 
 # RUBY
 #1
@@ -557,5 +581,133 @@ Exercise.create(
   houston = City("USA", "Texas")',
   date: '30/08/2017',
   language_id: python.id,
+  user_id: 1
+)
+
+
+
+# Rails
+# 1
+Exercise.create(
+  difficulty: 'Easy',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: rails.id,
+  user_id: 1
+)
+# 2
+Exercise.create(
+  difficulty: 'Medium',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: rails.id,
+  user_id: 1
+)
+# 3
+Exercise.create(
+  difficulty: 'Hard',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: rails.id,
+  user_id: 1
+)
+
+
+
+
+# Java
+# 1
+Exercise.create(
+  difficulty: 'Easy',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: java.id,
+  user_id: 1
+)
+# 2
+Exercise.create(
+  difficulty: 'Medium',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: java.id,
+  user_id: 1
+)
+# 3
+Exercise.create(
+  difficulty: 'Hard',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: java.id,
+  user_id: 1
+)
+
+
+
+
+
+# C++
+# 1
+Exercise.create(
+  difficulty: 'Easy',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: cplusplus.id,
+  user_id: 1
+)
+# 2
+Exercise.create(
+  difficulty: 'Medium',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: cplusplus.id,
+  user_id: 1
+)
+# 3
+Exercise.create(
+  difficulty: 'Hard',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: cplusplus.id,
+  user_id: 1
+)
+
+
+
+
+# SQL
+# 1
+Exercise.create(
+  difficulty: 'Easy',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: sql.id,
+  user_id: 1
+)
+# 2
+Exercise.create(
+  difficulty: 'Medium',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: sql.id,
+  user_id: 1
+)
+# 3
+Exercise.create(
+  difficulty: 'Hard',
+  description:'description',
+  solution:'solution',
+  date: '30/08/2017',
+  language_id: sql.id,
   user_id: 1
 )
