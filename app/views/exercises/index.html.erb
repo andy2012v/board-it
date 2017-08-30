@@ -7,15 +7,15 @@
             <h4 id="language-name"> <%= language.name %></h4>
               <div id="submission" class="box">
                 <h6 id="user"><span id="user-name">Username: </span>
-                <%= User.find(exercise.user_id).username %></h6>
+                  <%= User.find(exercise.user_id).username %></h6>
                 <h6 id="user"><span id="user-name">Difficulty: </span><textarea
                   id="submission_diff"> <%= exercise.difficulty %> </textarea></h6>
                 <h6 id="date_sub">Date:</h6>
-                <textarea id="submission"> <%= exercise.date %> </textarea></br></br>
+                  <textarea id="submission"> <%= exercise.date %> </textarea></br></br>
                 <h6 id="date_desc">Description:</h6>
-                <textarea id="submission"> <%= exercise.description%> </textarea></br></br>
+                  <textarea id="submission"> <%= exercise.description%> </textarea></br></br>
                 <h6 id="date_sol">Solution:</h6>
-                <textarea id="submission"> <%= exercise.solution %> </textarea></br></br>
+                  <textarea id="submission"> <%= exercise.solution %> </textarea></br></br>
                 <div id="box-buttons" class="box">
                   Not working yet
                   <a href="#" class="button-3d">Accept</a>

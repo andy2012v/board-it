@@ -9,7 +9,7 @@ redirected to the daily exercise for that difficulty of that language. -->
 <section class="four-up-feature">
   <div class="row four-up-feature-header align-center">
     <div class="small-8 large-centered columns">
-      <h2 class="title">
+      <h2 class="title" id="language_title">
         <%= @language.name%>
       </h2>
     </div>
@@ -20,7 +20,9 @@ redirected to the daily exercise for that difficulty of that language. -->
         <div class="small-6 large-4 columns">
           <a href="/languages/<%= @language.id %>/exercises/<%= exercise.id %>">
             <!-- <img class="four-up-feature-image" src="http://ianthekirkland.com/imgs/ruby-flat-icn.png" alt="icon"> -->
-              <h4> <%= exercise.difficulty %> </h4>
+            <div id="difficulty_boxes">
+              <h4 id="exercise_difficulty"> <%= exercise.difficulty %> </h4>
+            </div>
           </a>
         </div>
       <% end %>
