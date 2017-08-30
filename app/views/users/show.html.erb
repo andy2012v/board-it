@@ -4,10 +4,10 @@
         <div id="user-credentials" >
           <h4 id="username-index">Username: <span id="user-index"><%= @user.username %></span></h4>
           <h4 id="email-index">Email: <span id="user-index"><%= @user.email %></span></h4>
-
-           <%= link_to "destroy", @user, method: :delete,
-              data: { confirm: "You sure?" } %>
-
+          <div class="container" id="destroy_container">
+            <%= link_to "Destroy", @user, method: :delete,
+               data: { confirm: "You sure?" }, :id => "Destroy" %>
+          </div>
           <% else %>
         </div>
     </div>

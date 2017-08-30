@@ -23,8 +23,8 @@ feature "admin can delete a user" do
     click_on("Bob")
 
     expect(page).to have_content("Bob")
-    expect(page).to have_content("destroy")
-    click_on('destroy')
+    expect(page).to have_content("Destroy")
+    click_on('Destroy')
 
     expect(page).to have_content("User deleted")
   end

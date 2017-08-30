@@ -1,0 +1,16 @@
+#users_box {
+  margin: 2rem;
+  width: 10rem;
+  border-radius: 5rem;
+  background-color: #0288D1;
+  border-color: white;
+  text-align: center;
+}
+
+#users_list {
+  color: #0288D1;
+}
+
+#username_text {
+  color: white;
+}
