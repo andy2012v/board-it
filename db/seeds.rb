@@ -96,7 +96,7 @@ Exercise.create(
     your intent is generally a good practice, in any language. But whether or not you
     use parentheses, it’s important to be aware of these order of operations rules and
     to thereby ensure that you are properly determining when to employ and / or vs. && / ||.",
-  date: '29/08/2017',
+  date: '30/08/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -113,7 +113,7 @@ Exercise.create(
 
     Arrays are ordered collections of objects. Arrays are zero-indexed, meaning
     the first element is at position zero, the second is at position one, and so forth.',
-  date: '29/08/2017',
+  date: '30/08/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -132,7 +132,7 @@ Exercise.create(
    "Dog.about # a singleton method that's defined in Dog's singleton class:
     Dog.singleton_class.instance_methods.include? :about # => true
     Every Ruby object has a singleton class to store methods for a particular object.",
-  date: '29/08/2017',
+  date: '30/08/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -169,7 +169,7 @@ Exercise.create(
     An equivalent call of the collect method is done with the usual block syntax of:
 
     collect { |x| x.to_s }',
-  date: '30/08/2017',
+  date: '31/08/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -191,7 +191,7 @@ Exercise.create(
     Mutating an array means changing it so it is no longer the same (i.e. deleting
     elements, adding new elements, etc.). The map() method creates a new array,
     so the another_arr is unchanged',
-  date: '30/08/2017',
+  date: '31/08/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -214,7 +214,7 @@ Exercise.create(
     Hash.my_singleton_class == Hash.singleton_class # => true
     The \'class << obj' syntax changes the scope to the obj's singleton class. In this
     case self equals Object, so class << self changes the scope to Object\'s singleton class",
-  date: '30/08/2017',
+  date: '31/08/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -239,7 +239,7 @@ Exercise.create(
 
   x = String.new("i wish i was surfing")
   x = "i wish i was surfing"',
-  date: '31/08/2017',
+  date: '01/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -277,7 +277,7 @@ Exercise.create(
   in more than one place. The Don\'t Repeat Yourself (DRY) principle says that
   code should only be in one place and should never be repeated. Inheritance is
   one of the main techniques to keep code DRY.',
-  date: '31/08/2017',
+  date: '01/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -300,7 +300,7 @@ Exercise.create(
   keyword, the scope changes to the class. When the context changes
   (the terms context and scope are synonymous), the self keyword is reassigned to
   a different object.',
-  date: '31/08/2017',
+  date: '01/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -590,8 +590,20 @@ Exercise.create(
 # 1
 Exercise.create(
   difficulty: 'Easy',
-  description:'description',
-  solution:'solution',
+  description:
+  'Create a new Rails application called controller_tdd. Add
+  rspec_rails to the Gemfile. Install RSpec.',
+  solution:
+  'Install RSpec.
+
+  $ rails new controller_tdd
+
+  Gemfile
+  group :development, :test do
+    gem "rspec-rails"
+  end
+
+  $ bundle exec rails generate rspec:install  ',
   date: '30/08/2017',
   language_id: rails.id,
   user_id: 1
@@ -599,8 +611,18 @@ Exercise.create(
 # 2
 Exercise.create(
   difficulty: 'Medium',
-  description:'description',
-  solution:'solution',
+  description:
+  'Add code to enable the following behavior.
+
+  $ rails c
+  >> document = Document.first
+  >> document.approver_name
+  => "Bob"
+  >> document.approver_email
+  => "bob@example.com"',
+  solution:
+  'models/document.rb
+  delegate :name, :email, :to => :approver, :prefix => true',
   date: '30/08/2017',
   language_id: rails.id,
   user_id: 1
@@ -608,8 +630,21 @@ Exercise.create(
 # 3
 Exercise.create(
   difficulty: 'Hard',
-  description:'description',
-  solution:'solution',
+  description:
+  'Define a method in the User model that raises a RuntimeError with the message
+  "YES, a new user was created!" Raise this error every time a new user is saved.',
+  solution:
+  '# models/user.rb
+
+  class User < ActiveRecord::Base
+    attr_accessible :email, :name
+    has_many :documents, :foreign_key => "approver_id"
+    after_save :raise_happy_runtime
+
+    def raise_happy_runtime
+      raise "YES, a new user was created!"
+    end
+  end',
   date: '30/08/2017',
   language_id: rails.id,
   user_id: 1
@@ -622,8 +657,39 @@ Exercise.create(
 # 1
 Exercise.create(
   difficulty: 'Easy',
-  description:'description',
-  solution:'solution',
+  description:
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tollitur beneficium,
+  tollitur gratia, quae sunt vincla concordiae. An vero, inquit, quisquam potest
+  probare, quod perceptfum, quod. Mihi enim satis est, ipsis non satis. Apparet
+  statim, quae sint officia, quae actiones. Callipho ad virtutem nihil adiunxit
+  nisi voluptatem, Diodorus vacuitatem doloris. Duo Reges: constructio interrete.
+  Quid est, quod ab ea absolvi et perfici debeat?',
+  solution:
+  'EXAMPLE TEST
+  <form action="#" method="post">
+    <div>
+         <label for="name">Text Input:</label>
+         <input type="text" name="name" id="name" value="" tabindex="1" />
+    </div>
+
+    <div>
+         <h4>Radio Button Choice</h4>
+
+         <label for="radio-choice-1">Choice 1</label>
+         <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+
+     <label for="radio-choice-2">Choice 2</label>
+         <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+    </div>
+
+  <div>
+    <label for="select-choice">Select Dropdown Choice:</label>
+    <select name="select-choice" id="select-choice">
+      <option value="Choice 1">Choice 1</option>
+      <option value="Choice 2">Choice 2</option>
+      <option value="Choice 3">Choice 3</option>
+    </select>
+  </div>',
   date: '30/08/2017',
   language_id: java.id,
   user_id: 1
@@ -631,8 +697,39 @@ Exercise.create(
 # 2
 Exercise.create(
   difficulty: 'Medium',
-  description:'description',
-  solution:'solution',
+  description:
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tollitur beneficium,
+  tollitur gratia, quae sunt vincla concordiae. An vero, inquit, quisquam potest
+  probare, quod perceptfum, quod. Mihi enim satis est, ipsis non satis. Apparet
+  statim, quae sint officia, quae actiones. Callipho ad virtutem nihil adiunxit
+  nisi voluptatem, Diodorus vacuitatem doloris. Duo Reges: constructio interrete.
+  Quid est, quod ab ea absolvi et perfici debeat?',
+  solution:
+  'EXAMPLE TEST
+  <form action="#" method="post">
+    <div>
+         <label for="name">Text Input:</label>
+         <input type="text" name="name" id="name" value="" tabindex="1" />
+    </div>
+
+    <div>
+         <h4>Radio Button Choice</h4>
+
+         <label for="radio-choice-1">Choice 1</label>
+         <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+
+     <label for="radio-choice-2">Choice 2</label>
+         <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+    </div>
+
+  <div>
+    <label for="select-choice">Select Dropdown Choice:</label>
+    <select name="select-choice" id="select-choice">
+      <option value="Choice 1">Choice 1</option>
+      <option value="Choice 2">Choice 2</option>
+      <option value="Choice 3">Choice 3</option>
+    </select>
+  </div>',
   date: '30/08/2017',
   language_id: java.id,
   user_id: 1
@@ -640,8 +737,39 @@ Exercise.create(
 # 3
 Exercise.create(
   difficulty: 'Hard',
-  description:'description',
-  solution:'solution',
+  description:
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tollitur beneficium,
+  tollitur gratia, quae sunt vincla concordiae. An vero, inquit, quisquam potest
+  probare, quod perceptfum, quod. Mihi enim satis est, ipsis non satis. Apparet
+  statim, quae sint officia, quae actiones. Callipho ad virtutem nihil adiunxit
+  nisi voluptatem, Diodorus vacuitatem doloris. Duo Reges: constructio interrete.
+  Quid est, quod ab ea absolvi et perfici debeat?',
+  solution:
+  'EXAMPLE TEST
+  <form action="#" method="post">
+    <div>
+         <label for="name">Text Input:</label>
+         <input type="text" name="name" id="name" value="" tabindex="1" />
+    </div>
+
+    <div>
+         <h4>Radio Button Choice</h4>
+
+         <label for="radio-choice-1">Choice 1</label>
+         <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+
+     <label for="radio-choice-2">Choice 2</label>
+         <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+    </div>
+
+  <div>
+    <label for="select-choice">Select Dropdown Choice:</label>
+    <select name="select-choice" id="select-choice">
+      <option value="Choice 1">Choice 1</option>
+      <option value="Choice 2">Choice 2</option>
+      <option value="Choice 3">Choice 3</option>
+    </select>
+  </div>',
   date: '30/08/2017',
   language_id: java.id,
   user_id: 1
@@ -655,8 +783,39 @@ Exercise.create(
 # 1
 Exercise.create(
   difficulty: 'Easy',
-  description:'description',
-  solution:'solution',
+  description:
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tollitur beneficium,
+  tollitur gratia, quae sunt vincla concordiae. An vero, inquit, quisquam potest
+  probare, quod perceptfum, quod. Mihi enim satis est, ipsis non satis. Apparet
+  statim, quae sint officia, quae actiones. Callipho ad virtutem nihil adiunxit
+  nisi voluptatem, Diodorus vacuitatem doloris. Duo Reges: constructio interrete.
+  Quid est, quod ab ea absolvi et perfici debeat?',
+  solution:
+  'EXAMPLE TEST
+  <form action="#" method="post">
+    <div>
+         <label for="name">Text Input:</label>
+         <input type="text" name="name" id="name" value="" tabindex="1" />
+    </div>
+
+    <div>
+         <h4>Radio Button Choice</h4>
+
+         <label for="radio-choice-1">Choice 1</label>
+         <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+
+     <label for="radio-choice-2">Choice 2</label>
+         <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+    </div>
+
+  <div>
+    <label for="select-choice">Select Dropdown Choice:</label>
+    <select name="select-choice" id="select-choice">
+      <option value="Choice 1">Choice 1</option>
+      <option value="Choice 2">Choice 2</option>
+      <option value="Choice 3">Choice 3</option>
+    </select>
+  </div>',
   date: '30/08/2017',
   language_id: cplusplus.id,
   user_id: 1
@@ -664,8 +823,39 @@ Exercise.create(
 # 2
 Exercise.create(
   difficulty: 'Medium',
-  description:'description',
-  solution:'solution',
+  description:
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tollitur beneficium,
+  tollitur gratia, quae sunt vincla concordiae. An vero, inquit, quisquam potest
+  probare, quod perceptfum, quod. Mihi enim satis est, ipsis non satis. Apparet
+  statim, quae sint officia, quae actiones. Callipho ad virtutem nihil adiunxit
+  nisi voluptatem, Diodorus vacuitatem doloris. Duo Reges: constructio interrete.
+  Quid est, quod ab ea absolvi et perfici debeat?',
+  solution:
+  'EXAMPLE TEST
+  <form action="#" method="post">
+    <div>
+         <label for="name">Text Input:</label>
+         <input type="text" name="name" id="name" value="" tabindex="1" />
+    </div>
+
+    <div>
+         <h4>Radio Button Choice</h4>
+
+         <label for="radio-choice-1">Choice 1</label>
+         <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+
+     <label for="radio-choice-2">Choice 2</label>
+         <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+    </div>
+
+  <div>
+    <label for="select-choice">Select Dropdown Choice:</label>
+    <select name="select-choice" id="select-choice">
+      <option value="Choice 1">Choice 1</option>
+      <option value="Choice 2">Choice 2</option>
+      <option value="Choice 3">Choice 3</option>
+    </select>
+  </div>',
   date: '30/08/2017',
   language_id: cplusplus.id,
   user_id: 1
@@ -673,8 +863,39 @@ Exercise.create(
 # 3
 Exercise.create(
   difficulty: 'Hard',
-  description:'description',
-  solution:'solution',
+  description:
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tollitur beneficium,
+  tollitur gratia, quae sunt vincla concordiae. An vero, inquit, quisquam potest
+  probare, quod perceptfum, quod. Mihi enim satis est, ipsis non satis. Apparet
+  statim, quae sint officia, quae actiones. Callipho ad virtutem nihil adiunxit
+  nisi voluptatem, Diodorus vacuitatem doloris. Duo Reges: constructio interrete.
+  Quid est, quod ab ea absolvi et perfici debeat?',
+  solution:
+  'EXAMPLE TEST
+  <form action="#" method="post">
+    <div>
+         <label for="name">Text Input:</label>
+         <input type="text" name="name" id="name" value="" tabindex="1" />
+    </div>
+
+    <div>
+         <h4>Radio Button Choice</h4>
+
+         <label for="radio-choice-1">Choice 1</label>
+         <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+
+     <label for="radio-choice-2">Choice 2</label>
+         <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+    </div>
+
+  <div>
+    <label for="select-choice">Select Dropdown Choice:</label>
+    <select name="select-choice" id="select-choice">
+      <option value="Choice 1">Choice 1</option>
+      <option value="Choice 2">Choice 2</option>
+      <option value="Choice 3">Choice 3</option>
+    </select>
+  </div>',
   date: '30/08/2017',
   language_id: cplusplus.id,
   user_id: 1
@@ -687,8 +908,39 @@ Exercise.create(
 # 1
 Exercise.create(
   difficulty: 'Easy',
-  description:'description',
-  solution:'solution',
+  description:
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tollitur beneficium,
+  tollitur gratia, quae sunt vincla concordiae. An vero, inquit, quisquam potest
+  probare, quod perceptfum, quod. Mihi enim satis est, ipsis non satis. Apparet
+  statim, quae sint officia, quae actiones. Callipho ad virtutem nihil adiunxit
+  nisi voluptatem, Diodorus vacuitatem doloris. Duo Reges: constructio interrete.
+  Quid est, quod ab ea absolvi et perfici debeat?',
+  solution:
+    'EXAMPLE TEST
+    <form action="#" method="post">
+      <div>
+           <label for="name">Text Input:</label>
+           <input type="text" name="name" id="name" value="" tabindex="1" />
+      </div>
+
+      <div>
+           <h4>Radio Button Choice</h4>
+
+           <label for="radio-choice-1">Choice 1</label>
+           <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+
+       <label for="radio-choice-2">Choice 2</label>
+           <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+      </div>
+
+    <div>
+      <label for="select-choice">Select Dropdown Choice:</label>
+      <select name="select-choice" id="select-choice">
+        <option value="Choice 1">Choice 1</option>
+        <option value="Choice 2">Choice 2</option>
+        <option value="Choice 3">Choice 3</option>
+      </select>
+    </div>',
   date: '30/08/2017',
   language_id: sql.id,
   user_id: 1
@@ -696,8 +948,39 @@ Exercise.create(
 # 2
 Exercise.create(
   difficulty: 'Medium',
-  description:'description',
-  solution:'solution',
+  description:
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tollitur beneficium,
+  tollitur gratia, quae sunt vincla concordiae. An vero, inquit, quisquam potest
+  probare, quod perceptfum, quod. Mihi enim satis est, ipsis non satis. Apparet
+  statim, quae sint officia, quae actiones. Callipho ad virtutem nihil adiunxit
+  nisi voluptatem, Diodorus vacuitatem doloris. Duo Reges: constructio interrete.
+  Quid est, quod ab ea absolvi et perfici debeat?',
+  solution:
+    'EXAMPLE TEST
+    <form action="#" method="post">
+      <div>
+           <label for="name">Text Input:</label>
+           <input type="text" name="name" id="name" value="" tabindex="1" />
+      </div>
+
+      <div>
+           <h4>Radio Button Choice</h4>
+
+           <label for="radio-choice-1">Choice 1</label>
+           <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+
+       <label for="radio-choice-2">Choice 2</label>
+           <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+      </div>
+
+    <div>
+      <label for="select-choice">Select Dropdown Choice:</label>
+      <select name="select-choice" id="select-choice">
+        <option value="Choice 1">Choice 1</option>
+        <option value="Choice 2">Choice 2</option>
+        <option value="Choice 3">Choice 3</option>
+      </select>
+    </div>',
   date: '30/08/2017',
   language_id: sql.id,
   user_id: 1
@@ -705,8 +988,39 @@ Exercise.create(
 # 3
 Exercise.create(
   difficulty: 'Hard',
-  description:'description',
-  solution:'solution',
+  description:
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tollitur beneficium,
+  tollitur gratia, quae sunt vincla concordiae. An vero, inquit, quisquam potest
+  probare, quod perceptfum, quod. Mihi enim satis est, ipsis non satis. Apparet
+  statim, quae sint officia, quae actiones. Callipho ad virtutem nihil adiunxit
+  nisi voluptatem, Diodorus vacuitatem doloris. Duo Reges: constructio interrete.
+  Quid est, quod ab ea absolvi et perfici debeat?',
+  solution:
+    'EXAMPLE TEST
+    <form action="#" method="post">
+      <div>
+           <label for="name">Text Input:</label>
+           <input type="text" name="name" id="name" value="" tabindex="1" />
+      </div>
+
+      <div>
+           <h4>Radio Button Choice</h4>
+
+           <label for="radio-choice-1">Choice 1</label>
+           <input type="radio" name="radio-choice-1" id="radio-choice-1" tabindex="2" value="choice-1" />
+
+       <label for="radio-choice-2">Choice 2</label>
+           <input type="radio" name="radio-choice-2" id="radio-choice-2" tabindex="3" value="choice-2" />
+      </div>
+
+    <div>
+      <label for="select-choice">Select Dropdown Choice:</label>
+      <select name="select-choice" id="select-choice">
+        <option value="Choice 1">Choice 1</option>
+        <option value="Choice 2">Choice 2</option>
+        <option value="Choice 3">Choice 3</option>
+      </select>
+    </div>',
   date: '30/08/2017',
   language_id: sql.id,
   user_id: 1
