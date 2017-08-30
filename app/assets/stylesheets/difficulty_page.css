@@ -6,15 +6,30 @@
   margin-right: 5rem;
   height: 40rem;
 }
-h2.title {
+#language_title {
   font-size: 5rem;
-  font-family: 'Permanent Marker', cursive;
-  color: #D73A2E;
-}
-h5 {
-  text-align: center;
+  font-family: Exposition;
+  color: #9FC5F8;
+  text-shadow: -1px 0 #272727, 0 1px #272727, 1px 0 #272727, 0 -1px #272727;
 }
 
+#exercise_difficulty {
+  text-shadow: -1px 0 #272727, 0 1px #272727, 1px 0 #272727, 0 -1px #272727;
+  font-size: 2rem;
+  font-family: Exposition;
+  color: black;
+  margin-top: 6rem;
+}
+
+#difficulty_boxes {
+  width: 300px;
+  border: .2rem solid black;
+  background-color: #9FC5F8;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin: auto;
+  height: 20rem;
+}
 .four-up-feature .four-up-feature-header {
   margin-bottom: 3rem;
   display: -webkit-flex;
@@ -22,10 +37,10 @@ h5 {
   display: flex;
 }
 
-.four-up-feature .four-up-feature-image {
+/*.four-up-feature .four-up-feature-image {
   margin-bottom: 2rem;
 }
 
 .four-up-feature .four-up-feature-text {
   margin-bottom: 2rem;
-}
+}*/

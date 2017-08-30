@@ -4,12 +4,19 @@ body {background: #F0F0F0;}
 h4#titles-exercises {
   margin-left: auto;
   color: #9FC5F8;
+  font-family: Exposition;
   text-decoration: underline;
+  text-decoration-color: white;
 }
 
 h4#subtitles-exercises {
   color: #9FC5F8;
   text-decoration: underline;
+  text-decoration-color: white;
+}
+
+#diff-title {
+  color: black;
 }
 
 textarea {

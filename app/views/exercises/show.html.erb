@@ -4,22 +4,22 @@
 
   <div class='row' id='restaurant_show_page_box'>
     <div class="small-11 small-centered columns">
-      <h4 id="titles-exercises" >Difficulty: <%= @exercise.difficulty%></h4>
-      <h4 id="titles-exercises" >Date: <%= @exercise.date%></h4>
+      <h4 id="titles-exercises" >Difficulty: <span id="diff-title"><%= @exercise.difficulty%></span></h4>
+      <h4 id="titles-exercises" >Date: <span id="diff-title"><%= @exercise.date%></span></h4>
       <h4 id="subtitles-exercises">Exercise:</h4>
-      <textarea placeholder="This is an awesome comment box" rows="20"
-      name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
-      autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
-      readonly>    <%= @exercise.description%></textarea>
+        <textarea placeholder="This is an awesome comment box" rows="20"
+        name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
+        autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
+        readonly>    <%= @exercise.description%></textarea>
       <h4 id="subtitles-exercises">Solution:</h4>
-      <textarea placeholder="This is an awesome comment box" rows="20"
-      name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
-      autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
-      readonly>    <%= @exercise.solution%></textarea></textarea>
+        <textarea placeholder="This is an awesome comment box" rows="20"
+        name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
+        autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
+        readonly>    <%= @exercise.solution%></textarea>
       <h4 id="subtitles-exercises">Tips:</h4>
-      <textarea placeholder="This is an awesome comment box" rows="20"
-      name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
-      autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
-      readonly>    <%= @exercise.tips%></textarea></textarea>
+        <textarea placeholder="This is an awesome comment box" rows="20"
+        name="comment[text]" id="comment_text" cols="40" class="ui-autocomplete-input"
+        autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true"
+        readonly>    <%= @exercise.tips%></textarea>
     </div>
   </div>
