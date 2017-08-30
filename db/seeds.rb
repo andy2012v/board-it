@@ -13,7 +13,7 @@ User.create(
   admin: true,
   username: 'BoardItAdmin',
   email: 'admin@gmail.com',
-  password: 'admin'
+  password: 'admin2017'
 )
 
 
