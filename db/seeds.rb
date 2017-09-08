@@ -96,7 +96,7 @@ Exercise.create(
     your intent is generally a good practice, in any language. But whether or not you
     use parentheses, it’s important to be aware of these order of operations rules and
     to thereby ensure that you are properly determining when to employ and / or vs. && / ||.",
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -113,7 +113,7 @@ Exercise.create(
 
     Arrays are ordered collections of objects. Arrays are zero-indexed, meaning
     the first element is at position zero, the second is at position one, and so forth.',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -132,7 +132,7 @@ Exercise.create(
    "Dog.about # a singleton method that's defined in Dog's singleton class:
     Dog.singleton_class.instance_methods.include? :about # => true
     Every Ruby object has a singleton class to store methods for a particular object.",
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -169,7 +169,7 @@ Exercise.create(
     An equivalent call of the collect method is done with the usual block syntax of:
 
     collect { |x| x.to_s }',
-  date: '31/08/2017',
+  date: '10/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -191,7 +191,7 @@ Exercise.create(
     Mutating an array means changing it so it is no longer the same (i.e. deleting
     elements, adding new elements, etc.). The map() method creates a new array,
     so the another_arr is unchanged',
-  date: '31/08/2017',
+  date: '10/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -214,7 +214,7 @@ Exercise.create(
     Hash.my_singleton_class == Hash.singleton_class # => true
     The \'class << obj' syntax changes the scope to the obj's singleton class. In this
     case self equals Object, so class << self changes the scope to Object\'s singleton class",
-  date: '31/08/2017',
+  date: '10/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -239,7 +239,7 @@ Exercise.create(
 
   x = String.new("i wish i was surfing")
   x = "i wish i was surfing"',
-  date: '01/09/2017',
+  date: '11/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -277,7 +277,7 @@ Exercise.create(
   in more than one place. The Don\'t Repeat Yourself (DRY) principle says that
   code should only be in one place and should never be repeated. Inheritance is
   one of the main techniques to keep code DRY.',
-  date: '01/09/2017',
+  date: '11/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -300,7 +300,7 @@ Exercise.create(
   keyword, the scope changes to the class. When the context changes
   (the terms context and scope are synonymous), the self keyword is reassigned to
   a different object.',
-  date: '01/09/2017',
+  date: '11/09/2017',
   language_id: ruby.id,
   user_id: 1
 )
@@ -333,7 +333,7 @@ description:
   return !stack.length;
   };",
 solution: 5,
-date: '30/08/2017',
+date: '08/09/2017',
 language_id: javascript.id,
 user_id: 1
 )
@@ -356,7 +356,7 @@ description:
   var test = obj.prop.getFullname;
   console.log(test());",
 solution: "The code prints Aurelio De Rosa and John Doe",
-date: '30/08/2017',
+date: '08/09/2017',
 language_id: javascript.id,
 user_id: 1
 )
@@ -379,7 +379,7 @@ solution: "function Traverse(p_element,p_callback) {
        Traverse(list[i],p_callback);  // recursive call
    }
 }",
-date: '30/08/2017',
+date: '08/09/2017',
 language_id: javascript.id,
 user_id: 1
 )
@@ -396,7 +396,7 @@ solution:
 '"Bart Simpson"
 
 In this example, three strings are concatenated.',
-date: '31/08/2017',
+date: '09/09/2017',
 language_id: javascript.id,
 user_id: 1
 )
@@ -416,7 +416,7 @@ console.log(foo());',
 solution:
 '"Poppin bottles"
 The bar() method is hoisted to the top of the foo() method, so it can be called before it\'s defined.',
-date: '31/08/2017',
+date: '09/09/2017',
 language_id: javascript.id,
 user_id: 1
 )
@@ -446,7 +446,7 @@ solution:
 The happy object has a hi property that points to the named function sing().
 Object values are typically anonymous functions, but they can also be named
 functions. A named function works well in this example to allow for recursion.',
-date: '31/08/2017',
+date: '09/09/2017',
 language_id: javascript.id,
 user_id: 1
 )
@@ -467,7 +467,7 @@ solution:
 When the boolean condition evaluates to false (5 > 10), the code block
 associated with the if keyword is not executed and the code block associated
 with the else keyword is executed.',
-date: '01/09/2017',
+date: '10/09/2017',
 language_id: javascript.id,
 user_id: 1
 )
@@ -491,7 +491,7 @@ solution:
     }
   }
 }',
-date: '01/09/2017',
+date: '10/09/2017',
 language_id: javascript.id,
 user_id: 1
 )
@@ -510,7 +510,7 @@ solution:
 The boringBuf variable encodes "8b76fde713ce" as a base64 string.
 
 The result variable decodes the boringBuf buffer.',
-date: '01/09/2017',
+date: '10/09/2017',
 language_id: javascript.id,
 user_id: 1
 )
@@ -535,7 +535,7 @@ Exercise.create(
 
   This exercise uses the tmp variable to switch the values of the first_name and
   hobby variables. String interpolation is used to print the resulting string to the console.',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: python.id,
   user_id: 1
 )
@@ -555,7 +555,7 @@ Exercise.create(
   I like to laugh
   I like to sing
   for loops can be used to iterate over every item in a tuple.',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: python.id,
   user_id: 1
 )
@@ -579,7 +579,7 @@ Exercise.create(
   The City class must be instantiated with two arguments, so our code that only instantiated it with one argument (City("USA")) is wrong. This would fix the code.
 
   houston = City("USA", "Texas")',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: python.id,
   user_id: 1
 )
@@ -604,7 +604,7 @@ Exercise.create(
   end
 
   $ bundle exec rails generate rspec:install  ',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: rails.id,
   user_id: 1
 )
@@ -623,7 +623,7 @@ Exercise.create(
   solution:
   'models/document.rb
   delegate :name, :email, :to => :approver, :prefix => true',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: rails.id,
   user_id: 1
 )
@@ -645,7 +645,7 @@ Exercise.create(
       raise "YES, a new user was created!"
     end
   end',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: rails.id,
   user_id: 1
 )
@@ -690,7 +690,7 @@ Exercise.create(
       <option value="Choice 3">Choice 3</option>
     </select>
   </div>',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: java.id,
   user_id: 1
 )
@@ -730,7 +730,7 @@ Exercise.create(
       <option value="Choice 3">Choice 3</option>
     </select>
   </div>',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: java.id,
   user_id: 1
 )
@@ -770,7 +770,7 @@ Exercise.create(
       <option value="Choice 3">Choice 3</option>
     </select>
   </div>',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: java.id,
   user_id: 1
 )
@@ -816,7 +816,7 @@ Exercise.create(
       <option value="Choice 3">Choice 3</option>
     </select>
   </div>',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: cplusplus.id,
   user_id: 1
 )
@@ -856,7 +856,7 @@ Exercise.create(
       <option value="Choice 3">Choice 3</option>
     </select>
   </div>',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: cplusplus.id,
   user_id: 1
 )
@@ -896,7 +896,7 @@ Exercise.create(
       <option value="Choice 3">Choice 3</option>
     </select>
   </div>',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: cplusplus.id,
   user_id: 1
 )
@@ -941,7 +941,7 @@ Exercise.create(
         <option value="Choice 3">Choice 3</option>
       </select>
     </div>',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: sql.id,
   user_id: 1
 )
@@ -981,7 +981,7 @@ Exercise.create(
         <option value="Choice 3">Choice 3</option>
       </select>
     </div>',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: sql.id,
   user_id: 1
 )
@@ -1021,7 +1021,7 @@ Exercise.create(
         <option value="Choice 3">Choice 3</option>
       </select>
     </div>',
-  date: '30/08/2017',
+  date: '08/09/2017',
   language_id: sql.id,
   user_id: 1
 )
